@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+
+body {
+    background: linear-gradient(to right, rgb(239, 55, 55), rgba(255, 0, 0, 0)),
+                linear-gradient(to left, rgb(31, 31, 220), rgba(0, 0, 255, 0));
+    background-blend-mode: screen;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.hero {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://media.licdn.com/dms/image/v2/C561BAQH-82wZjoUI1A/company-background_10000/company-background_10000/0/1630686316210/codechef_srmrmp_cover?e=1730610000&v=beta&t=5AdjLX_7Pq8cb7IKqmIjiQ36kN2j5_eRUJx1wPqy5JM') center/cover no-repeat;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 20px;
+    max-width: 700px;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.hero .btn {
+    padding: 12px 30px;
+    font-size: 18px;
+    color: #333;
+    background-color: #0ff5ed;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.hero .btn:hover {
+    background-color: #0ff5ed;
+}
+
+
+form {
+    background-color: #ec565dc2;
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 30px 20px;
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    text-align: left;
+}
+
+.form-control {
+    margin-bottom: 25px;
+}
+
+.form-control label {
+    font-weight: bold;
+    font-size: 17px;
+    margin-bottom: 8px;
+    display: block;
+    color: #333;
+}
+
+.form-control input,
+.form-control select,
+.form-control textarea {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    font-size: 16px;
+    font-family: inherit;
+}
+
+.form-control input[type="radio"],
+.form-control input[type="checkbox"] {
+    display: inline-block;
+    width: auto;
+    margin-right: 8px;
+}
+
+button {
+    background-color: rgb(141, 141, 237);
+    border: 1px solid #777;
+    border-radius: 50px;
+    font-size: 18px;
+    color: #333;
+    padding: 12px;
+    width: 100%;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: rgba(61, 61, 241, 0.867);
+}
+
+.social-links {
+     display: flex;
+     gap: 15px;
+     justify-content: center;
+     margin-top: 20px;
+}
+
+.social-icon {
+     font-size: 24px;
+     color: #050000;
+     text-decoration: none;
+     transition: color 0.3s;
+}
+
+ .social-icon:hover {
+    color: #0b0003;
+}

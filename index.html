@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codekrafters Survey Form</title>
+
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        
+        body {
+            background: linear-gradient(to right, rgb(239, 55, 55), rgba(255, 0, 0, 0)),
+                        linear-gradient(to left, rgb(31, 31, 220), rgba(0, 0, 255, 0));
+            background-blend-mode: screen;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        
+        .hero {
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://media.licdn.com/dms/image/v2/C561BAQH-82wZjoUI1A/company-background_10000/company-background_10000/0/1630686316210/codechef_srmrmp_cover?e=1730610000&v=beta&t=5AdjLX_7Pq8cb7IKqmIjiQ36kN2j5_eRUJx1wPqy5JM') center/cover no-repeat;
+            color: #fff;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            max-width: 700px;
+            margin-bottom: 30px;
+            line-height: 1.5;
+        }
+
+        .hero .btn {
+            padding: 12px 30px;
+            font-size: 18px;
+            color: #333;
+            background-color: #0ff5ed;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .hero .btn:hover {
+            background-color: #0ff5ed;
+        }
+
+
+        form {
+            background-color: #ec565dc2;
+            max-width: 500px;
+            margin: 30px auto;
+            padding: 30px 20px;
+            box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+            border-radius: 8px;
+            text-align: left;
+        }
+
+        .form-control {
+            margin-bottom: 25px;
+        }
+
+        .form-control label {
+            font-weight: bold;
+            font-size: 17px;
+            margin-bottom: 8px;
+            display: block;
+            color: #333;
+        }
+
+        .form-control input,
+        .form-control select,
+        .form-control textarea {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            width: 100%;
+            font-size: 16px;
+            font-family: inherit;
+        }
+
+        .form-control input[type="radio"],
+        .form-control input[type="checkbox"] {
+            display: inline-block;
+            width: auto;
+            margin-right: 8px;
+        }
+
+        button {
+            background-color: rgb(141, 141, 237);
+            border: 1px solid #777;
+            border-radius: 50px;
+            font-size: 18px;
+            color: #333;
+            padding: 12px;
+            width: 100%;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background-color: rgba(61, 61, 241, 0.867);
+        }
+       
+        .social-links {
+             display: flex;
+             gap: 15px;
+             justify-content: center;
+             margin-top: 20px;
+        }
+
+        .social-icon {
+             font-size: 24px;
+             color: #050000;
+             text-decoration: none;
+             transition: color 0.3s;
+        }
+
+         .social-icon:hover {
+            color: #0b0003;
+}
+
+        
+    </style>
+</head>
+
+<body>
+   
+    <section class="hero">
+        <img src="https://media.licdn.com/dms/image/v2/D560BAQFttEd7dNloVg/img-crop_100/img-crop_100/0/1722006847936?e=1738195200&v=beta&t=_PVj7EzEzo0yCUrSgdk0l41DGzR8PG0k_6etIljf_xg" alt="Logo" width="100" style="margin-bottom: 20px;">
+        <h1>Welcome to Codekrafters</h1>
+        <p>We’re glad to have you here! Please take a moment to complete our survey and help us improve our community for everyone.</p>
+        <a href="#form" class="btn">Get Started</a>
+    </section>
+
+    
+    <form id="form">
+        <div class="form-control">
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+        </div>
+
+        <div class="form-control">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+        </div>
+
+        <div class="form-control">
+            <label for="age">Age</label>
+            <input type="number" id="age" placeholder="Enter your age" required>
+        </div>
+
+        <div class="form-control">
+            <label for="role">Which option best describes you?</label>
+            <select id="role" required>
+                <option value="student">Student</option>
+                <option value="intern">Intern</option>
+                <option value="professional">Professional</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+
+        <div class="form-control">
+            <label>Would you recommend our club to your friends?</label>
+            <label><input type="radio" name="recommend" value="yes"> Yes</label>
+            <label><input type="radio" name="recommend" value="no"> No</label>
+            <label><input type="radio" name="recommend" value="maybe"> Maybe</label>
+        </div>
+
+        <div class="form-control">
+            <label>Languages and Frameworks known</label>
+            <label><input type="checkbox" name="languages" value="C"> C</label>
+            <label><input type="checkbox" name="languages" value="C++"> C++</label>
+            <label><input type="checkbox" name="languages" value="Java"> Java</label>
+            <label><input type="checkbox" name="languages" value="Python"> Python</label>
+            <label><input type="checkbox" name="languages" value="JavaScript"> JavaScript</label>
+            <label><input type="checkbox" name="languages" value="React"> React</label>
+            <label><input type="checkbox" name="languages" value="Node"> Node</label>
+        </div>
+
+        <div class="form-control">
+            <label for="Club">What do you know about our club?</label>
+            <textarea id="Club" placeholder="Enter your comment here" required></textarea>
+        </div>
+
+        <div class="form-control">
+            <label for="comment">Any comments or suggestions</label>
+            <textarea id="comment" placeholder="Your feedback"></textarea>
+        </div>
+
+        <button type="submit">Submit</button>
+
+    
+        <div class="social-links">
+          <a href="https://www.instagram.com/codekrafterssrm.rmp?igsh=MXJuczBvdjNydm9mNg==" target="_blank" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/codechef-srmrmp/" target="_blank" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="mailto:contact@example.com" class="social-icon" aria-label="Gmail"><i class="fas fa-envelope"></i></a>
+        </div>
+
+    
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    </form>
+
+</body>
+
+</html>
